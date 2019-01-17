@@ -1,10 +1,48 @@
-body {
-  background-color: #babe69;
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
 }
 
-div{
-  background-color: #c0ffee;
-  padding:30px;
-  margin:300px;
-  text-align: center;
+html {
+  font-size: 15px;
+}
+
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.wrapper {
+  @include flex_row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .content {
+    margin: 0 $gutter;
+    width: 30vw;
+    padding: $gutter*2;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1px;
+    p {
+      font-size: 2rem;
+      @include flex_column;
+      text-align: center;
+      span {
+        color: black;
+        &:first-child {
+          font-size: 4rem;
+          font-family: $font-special;
+        }
+        &:nth-child(2) {
+          font-family: $font-main;
+        }
+      }
+    }
+  }
 }

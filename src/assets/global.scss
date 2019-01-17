@@ -1,4 +1,8 @@
 @charset "utf-8";
 
+@import "variables.scss";
+/* le dossier variable est toujours en premier car les variables sont appelées dans les import suivant */
+@import "fonctions.scss";
+
 /* Structure */
 @import "structure.scss";
